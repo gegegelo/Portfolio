@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Contacts</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+
+		<!--wrapper start-->
+		<div class="wrapper">
+			<!--header menu start-->
+			<div class="header">
+				<div class="header-menu">
+					<div class="sidebar-btn">
+						<i class="fas fa-bars"></i>
+					</div>
+				</div>
+			</div>
+			<!--header menu end-->
+			<!--sidebar start-->
+			<div class="sidebar">
+				<div class="sidebar-menu">
+					<center class="profile">
+						<img src="img/profile.png" alt="">
+						<p>Angelo A. Ramos</p>
+					</center>
+					<li class="item">
+						<a href="index.html" class="menu-btn">
+							<i class="fas fa-home"></i><span>Home</span>
+						</a>
+					</li>
+					<li class="item" id="project">
+						<a href="projects.html" class="menu-btn">
+							<i class="fas fa-briefcase"></i><span>Projects</span>
+						</a>
+					</li>
+					<li class="item" id="about">
+						<a href="" class="menu-btn">
+							<i class="fas fa-envelope"></i><span>Contact</span>
+						</a>
+					</li>
+				</div>
+			</div>
+			<div class="main-container">				
+				<div class="card">
+					<h1>Contact me!</h1>
+						<h2>Reach me out here!</h2>
+					<div class="contact-info">
+					  
+						<div class="w3-bar w3-black">
+						  <button class="w3-bar-item w3-button tab w3-blue" onclick="openContact(event,'phone')"><i class="fas fa-phone"></i></button>
+						  <button class="w3-bar-item w3-button tab" onclick="openContact(event,'facebook')"><i class="fab fa-facebook"></i></button>
+						  <button class="w3-bar-item w3-button tab" onclick="openContact(event,'gmail')"><i class="fab fa-google"></i></button>
+						</div>
+						
+						<div id="phone" class="contact">
+						  <h1>Phone Number</h1>
+						  <h2><i class="fas fa-phone"></i> : (+63) 905 3167 7309</h2>
+						</div>
+					  
+						<div id="facebook" class="contact" style="display:none">
+						  <h1> Facebook</h1>
+						  <h2><i class="fab fa-facebook"></i> <a href="www.facebook.com/gegelogrrr"> : http://www.facebook.com/gegelogrrr</a></h2> 
+						</div>
+					  
+						<div id="gmail" class="contact" style="display:none">
+						  <h1>Gmail</h1>
+						  <h2><i class="fab fa-google"></i><a href="www.gmail.com"> : angelor0922@gmail.com</h2>
+						</div>
+					  </div>
+					  
+				</div>
+				<footer>
+					<div class="fixed-footer">
+						<div class="container">Copyright &copy; 2021 Ramos,Angelo A.</div>        
+				</footer>
+			<!--main container end-->
+		
+		</div>	
+		<!--wrapper end-->
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$(".sidebar-btn").click(function(){
+				$(".wrapper").toggleClass("collapse");
+			});
+		});
+		</script>
+
+	<script>
+	function openContact(evt, contactType) {
+	  var i, x, tablinks;
+	  x = document.getElementsByClassName("contact");
+	  for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	  }
+	  tablinks = document.getElementsByClassName("tab");
+	  for (i = 0; i < x.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" w3-blue", "");
+	  }
+	  document.getElementById(contactType).style.display = "block";
+	  evt.currentTarget.className += " w3-blue";
+	}
+	</script>
+	
+
+	</body>
+</html>

@@ -1,0 +1,290 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body{
+  background: #000000;
+}
+
+.wrapper .header{
+  z-index: 1;
+  background: #000000;
+  position: fixed;
+  width: calc(100% - 0%);
+  height: 70px;
+  display: flex;
+  top: 0;
+}
+
+.wrapper .header .header-menu{
+  width: calc(100% - 0%);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.wrapper .header .header-menu .sidebar-btn{
+  color: #F9F7F0;
+  position: absolute;
+  font-size: 25px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-property: color;
+}
+
+.wrapper .header .header-menu .sidebar-btn:hover{
+  color: #18B7BE;
+}
+
+.wrapper .sidebar{
+  z-index: 1;
+  background: #050505e3;
+  position: fixed;
+  top: 70px;
+  width: 250px;
+  height: 100%;
+  transition: 0.3s;
+  transition-property: width;
+  overflow-y: auto;
+}
+
+.wrapper .sidebar .sidebar-menu{
+  overflow: hidden;
+}
+
+.wrapper .sidebar .sidebar-menu .profile img{
+  margin: 20px 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.wrapper .sidebar .sidebar-menu .profile p{
+  color: #F9F7F0;
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.wrapper .sidebar .sidebar-menu .item{
+  width: 250px;
+  overflow: hidden;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn{
+  display: block;
+  color: #fff;
+  position: relative;
+  padding: 25px 20px;
+  transition: 0.3s;
+  transition-property: color;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn:hover{
+  color: #18B7BE;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn i{
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+.wrapper .main-container{
+  width: (100% - 250px);
+  margin-top: 0px;
+  margin-left: 250px;
+  background: url(img/home_bg.png)no-repeat;
+  background-size: cover;
+  height: 100vh;
+  transition: 0.3s;
+}
+
+.wrapper.collapse .sidebar{
+  width: 70px;
+}
+
+.wrapper.collapse .sidebar .profile img,
+.wrapper.collapse .sidebar .profile p,
+.wrapper.collapse .sidebar a span{
+  display: none;
+}
+
+.wrapper.collapse .main-container{
+  width: calc(100% - 70px);
+  margin-left: 70px;
+}
+
+.wrapper .main-container .card{
+  background: rgba(0, 0, 0, 0.795);
+  margin-top: 70px;
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+}
+
+.wrapper .main-container .card .readmore-btn{
+  background: #05050525;
+  color: #F9F7F0;
+  border-radius: 100px;
+  font-weight: 600;
+  height: 40px;
+  width: 20%;
+  font-size: 20px;
+  margin-left: 6em;
+  -webkit-text-stroke: 0.5px #70d2ff;
+  transition: 0.5s;
+  transition-property: background;
+  transition-property: color;
+  transition-property: -webkit-text-stroke;
+}
+
+.wrapper .main-container .card .readmore-btn:hover{
+  color: #000000;
+  background: #70d2ff;
+  -webkit-text-stroke: 0.5px #70d2ff;
+}
+
+.wrapper .main-container .card h1{
+  padding-top: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-indent: 1em;
+  font-size: 60px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0.5px #70d2ff;
+}
+.wrapper .main-container .card h1 span{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 80px;
+  color: #70d2ff;
+  -webkit-text-stroke: 0.5px #ffffff;
+}
+.wrapper .main-container .card h2{
+  margin-top: 0;
+  padding-top: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-indent: 3em;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0.5px #70d2ff;
+}
+
+.wrapper .main-container .card h3{
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  text-indent: 5em;
+  -webkit-text-stroke: 1px;
+}
+
+.wrapper .main-container .card p{
+  display: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  word-spacing: 5px;
+  margin-left: 5em;
+  margin-right: 5em;
+  color: #F9F7F0;
+  font-size: 22px;
+  -webkit-text-stroke: 0.2px black;
+}
+
+.wrapper .main-container .card p span{
+  color: #70d2ff;
+  font-weight: bold;
+  -webkit-text-stroke: 0.1px rgb(255, 255, 255);
+}
+
+.wrapper .main-container .card .contact-info{
+  border: 2px solid #70d2ff;
+  width: 70%;
+  margin-top: 50px;
+  margin-left: 15%;
+  background-color: black;
+  padding-bottom: 20px;
+}
+
+.wrapper .main-container .card .contact-info .contact{
+  border-top:2px solid #70d2ff;
+}
+
+.wrapper .main-container .card .contact-info button{
+  font-size: 20px;
+}
+
+.wrapper .main-container .card .project-container{
+  border:2px solid #70d2ff;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: 20px;
+}
+
+.wrapper .main-container .card .project-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #1414148e;
+  padding: 10px;
+}
+
+.wrapper .main-container .card .project-grid-container img{
+  width:100%;
+}
+
+.wrapper .main-container .card .projects {
+  background-color: rgba(0, 0, 0, 0.356);
+  border: 8px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.wrapper .main-container .card .project-grid-container .projects-title{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  font-size: 25px;
+  color: #f9f7f0;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 0.5px #70d2ff;
+}
+
+.wrapper .main-container .card .project-grid-container .projects-description{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 5px;
+  font-size: 20px;
+  color: #f9f7f0;
+}
+
+.wrapper .main-container .card .project-grid-container .projects-language{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  font-size: 20px;
+  color: #70d2ff;
+}
+
+.wrapper .main-container .card .project-grid-container .projects-language span{
+  margin-left: 30px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.wrapper .main-container footer {
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 30px;
+  width: 100%;
+  position: fixed;        
+  background: #000000;
+  padding: 10px 0;
+  color: #fff;
+  bottom: 0;
+}

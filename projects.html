@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Porfolio of Angelo Ramos</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+
+		<!--wrapper start-->
+		<div class="wrapper">
+			<!--header menu start-->
+			<div class="header">
+				<div class="header-menu">
+					<div class="sidebar-btn">
+						<i class="fas fa-bars"></i>
+					</div>
+				</div>
+			</div>
+			<!--header menu end-->
+			<!--sidebar start-->
+			<div class="sidebar">
+				<div class="sidebar-menu">
+					<center class="profile">
+						<img src="img/profile.png" alt="">
+						<p>Angelo A. Ramos</p>
+					</center>
+					<li class="item">
+						<a href="index.html" class="menu-btn">
+							<i class="fas fa-home"></i><span>Home</span>
+						</a>
+					</li>
+					<li class="item" id="project">
+						<a href="projects.html" class="menu-btn">
+							<i class="fas fa-briefcase"></i><span>Projects</span>
+						</a>
+					</li>
+					<li class="item" id="about">
+						<a href="contact.html" class="menu-btn">
+							<i class="fas fa-envelope"></i><span>Contact</span>
+						</a>
+					</li>
+				</div>
+			</div>
+			<div class="main-container">				
+				<div class="card">
+					<h1>Projects</h1>
+					<div class="project-container">
+						<div class="project-grid-container">
+							
+								<div class="projects">
+									<div class="projects-title">Popcorn Hub</div><br>
+									<a href="http://popcornhub2021.000webhostapp.com/Home.php">
+										<img src="projects/popcorn-hub/thumbnail.PNG"></a>
+											<div class="projects-description">"A online movie ticketing site that also offers snacks while watching movies."</div>
+												<div class="projects-language">Language use:<br><span>html, php, css, bootstrap</span></div>
+								</div>
+								
+								<div class="projects">
+									<div class="projects-title">Picture Text picture-text_css </div><br>
+										<a href="projects/picture-text_css/index.html">
+											<img src="projects/picture-text_css/thumbnail.PNG"></a>
+												<div class="projects-description">"A image blend with CSS, overlay of text to the image."</div>
+													<div class="projects-language">Language use:<br><span>html, css</span></div>
+								</div>
+								
+								<div class="projects">
+									<div class="projects-title">Admin Student Database Php</div><br>
+										<a href="projects/admin_studentdb/index.php">
+										<img src="projects/admin_studentdb/thumbnail.PNG"></a>
+											<div class="projects-description">"A web system that has different type of funtions between the admin and the student."</div>
+												<div class="projects-language">Language use:<br><span>html, css, php, bootstrap</span></div>
+								</div> 
+								
+								<div class="projects">
+									<div class="projects-title">Task List Laravel</div><br>
+										<a href="projects/quickstart/server.php">
+										<img src="projects/quickstart/thumbnail.png"></a>
+											<div class="projects-description">"A project on which you can put your task and list them."</div>
+												<div class="projects-language">Language use:<br><span>html, css, laravel</span></div>
+								</div>
+								
+								
+								<div class="projects">
+									<div class="projects-title">HangIT </div><br>
+										<a href="projects/hangit/HangIT.py">
+										<img src="projects/hangit/thumbnail.PNG"></a>
+											<div class="projects-description">"A simple game came from the game Hanggaroo but have a twist that only guess words that are connected to Information Technology"</div>
+												<div class="projects-language">Language use:<span>phyton</span></div>
+								</div>	
+				</div>	
+				</div>
+				<br>
+				<br>
+				<br>
+				<footer>
+					<div class="fixed-footer">
+						<div class="container">Copyright &copy; 2021 Ramos,Angelo A.</div>        
+				</footer>
+				
+			<!--main container end-->
+		
+		</div>	
+		<!--wrapper end-->
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$(".sidebar-btn").click(function(){
+				$(".wrapper").toggleClass("collapse");
+			});
+		});
+		</script>
+
+		
+	<script>
+	function readmoreFunction() {
+	  var dots = document.getElementById("dots");
+	  var moreText = document.getElementById("know-me-more");
+	  var btnText = document.getElementById("readmoreBtn");
+	
+	  if (dots.style.display === "none") {
+		dots.style.display = "block";
+		btnText.innerHTML = 'Know me more <i class="fas fa-sort-down" aria-hidden="true"></i>';; 
+		moreText.style.display = "none";
+	  } else {
+		dots.style.display = "none";
+		btnText.innerHTML = 'Close <i class="fas fa-sort-up" aria-hidden="true"></i>';; 
+		moreText.style.display = "block";
+	  }
+	}
+	</script>
+	</body>
+</html>

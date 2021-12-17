@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Porfolio of Angelo Ramos</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+
+		<!--wrapper start-->
+		<div class="wrapper">
+			<!--header menu start-->
+			<div class="header">
+				<div class="header-menu">
+					<div class="sidebar-btn">
+						<i class="fas fa-bars"></i>
+					</div>
+				</div>
+			</div>
+			<!--header menu end-->
+			<!--sidebar start-->
+			<div class="sidebar">
+				<div class="sidebar-menu">
+					<center class="profile">
+						<img src="img/profile.png" alt="">
+						<p>Angelo A. Ramos</p>
+					</center>
+					<li class="item">
+						<a href="index.html" class="menu-btn">
+							<i class="fas fa-home"></i><span>Home</span>
+						</a>
+					</li>
+					<li class="item" id="project">
+						<a href="projects.html" class="menu-btn">
+							<i class="fas fa-briefcase"></i><span>Projects</span>
+						</a>
+					</li>
+					<li class="item" id="about">
+						<a href="contact.html" class="menu-btn">
+							<i class="fas fa-envelope"></i><span>Contact</span>
+						</a>
+					</li>
+				</div>
+			</div>
+			<div class="main-container">				
+				<div class="card">
+					<h1>Hi My Name is <span>Angelo Ramos</span></h1>
+					<h2>Freelance Developer</h2><span id="dots"></span>
+					<button onclick="readmoreFunction()" class="readmore-btn" id="readmoreBtn">Know me more <i class="fas fa-sort-down"></i></button>
+					<p id="know-me-more"><br> Undergraduate Bachelour of Science in Information Technology student of Central Luzon State University. I learned and become familiarize to programming when i entered college life, before i don't know what programming is I just see it on the movies such as hackers, typing in a black and green screen. but now i know some fundamentals of programming languages such as <span>HTML, CSS, JAVA, PYTHON, BOOTSTRAP, JAVASCRIPT, C++ </span> and a little bit on <span>LARAVEL</span>. Programming is so stressful but when you successfully run the code it is so cool it feels like your too smart just like what i've seen on movies. I'm dreaming to make my dreams come true to become successful someday and have a work that is inline with my course. </p>
+				</div>					
+				<footer>
+					<div class="fixed-footer">
+						<div class="container">Copyright &copy; 2021 Ramos,Angelo A.</div>        
+				</footer>
+			<!--main container end-->
+		
+		</div>	
+		<!--wrapper end-->
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$(".sidebar-btn").click(function(){
+				$(".wrapper").toggleClass("collapse");
+			});
+		});
+		</script>
+
+		
+	<script>
+	function readmoreFunction() {
+	  var dots = document.getElementById("dots");
+	  var moreText = document.getElementById("know-me-more");
+	  var btnText = document.getElementById("readmoreBtn");
+	
+	  if (dots.style.display === "none") {
+		dots.style.display = "block";
+		btnText.innerHTML = 'Know me more <i class="fas fa-sort-down" aria-hidden="true"></i>';; 
+		moreText.style.display = "none";
+	  } else {
+		dots.style.display = "none";
+		btnText.innerHTML = 'Close <i class="fas fa-sort-up" aria-hidden="true"></i>';; 
+		moreText.style.display = "block";
+	  }
+	}
+	</script>
+	</body>
+</html>
